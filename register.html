@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>Real Time Chat Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<meta name="description" content="Real Time Chat Register">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/customize.css">
+</head>
+<body>
+<div class="d-flex align-items-center justify-content-center min-vh-100">
+  <div class="card p-4" style="width: 100%; max-width: 500px;">
+    <div class="card-body text-center"> <img class="mx-auto mb-3" src="img/icon-smile.png" alt="Your Company" style="height: 80px; width: auto;" />
+      <h2 class="h4 mb-4">Real Time Chat<br>
+        新規登録</h2>
+      <form id="register-form">
+        <div class="mb-3">
+          <label for="name" class="form-label d-flex">Name</label>
+          <input
+              id="name"
+              name="name"
+              type="text"
+              class="form-control"
+			　 placeholder="例: 山田 太郎"	   
+              required
+            />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label d-flex">Email address</label>
+          <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control"
+			  placeholder="例: example@example.com"
+              required
+            />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label d-flex">Password</label>
+          <input
+              id="password"
+    name="password"
+    type="password"
+    class="form-control"
+    placeholder="半角英数文字8文字以上のパスワード" 
+    required
+            />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+ <script type="module" src="js/register.js"></script>	
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* CSS Document */
+
+@charset "UTF-8";
+body {
+  background-color: #474848;
+  font-family: Arial, sans-serif;
+}
+.h4 {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.card {
+  background: #393938;
+  border-radius: 8px;
+  box-shadow: -5px -5px 10px 0px rgb(53 53 53 / 37%), 5px 5px 10px 0px rgb(0 0 0 / 66%);
+}
+.form-label {
+  color: #ffffff !important;
+}
+/* プレースホルダーの色を薄いグレーに設定 */
+input::placeholder {
+  color: #cccccc; /* 薄いグレー */
+  font-size: 12px;
+}
+/* テキストエリアにも適用 */
+textarea::placeholder {
+  color: #cccccc; /* 薄いグレー */
+  font-size: 12px;
+}
+.chat-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #393938;
+  border-radius: 8px;
+  box-shadow: -5px -5px 10px 0px rgb(53 53 53 / 37%), 5px 5px 10px 0px rgb(0 0 0 / 66%);
+}
+.chat-header {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 900;
+}
+.chat-messages {
+  height: 60vh;
+  overflow-y: auto;
+  border: 1px solid #3d3d3d;
+  border-radius: 5px;
+  padding: 30px;
+  background: #1f1f1f;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 0px 10px 0px rgb(0 0 0);
+}
+.chat-message {
+  display: flex;
+  align-items: end;
+  margin-bottom: 15px;
+}
+.chat-message.left {
+  flex-direction: row-reverse;
+}
+.chat-message .user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+.chat-message.left .user-container {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.user-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.user-name {
+  font-size: 14px;
+  text-align: center;
+  color: #6c757d;
+}
+.chat-bubble {
+  width: auto;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+.chat-bubble.right {
+  background: #ffffff;
+}
+.chat-bubble.left {
+  background: #0fb613;
+}
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.chat-bubble.right::after {
+  border-width: 14px 3px 0px 10px;
+  border-color: #ffffff transparent transparent transparent;
+  top: 23;
+  left: -8px;
+  bottom: 9px;
+  -webkit-transform: rotate(85deg);
+  transform: rotate(85deg);
+}
+.chat-bubble.left::after {
+  border-width: 20px 10px 0px 10px;
+  border-color: #0bb712 transparent transparent transparent;
+  top: 23px;
+  right: -2px;
+  -webkit-transform: rotate(44deg);
+  transform: rotate(44deg);
+}
+.chat-time {
+  font-size: 12px;
+  text-align: right;
+  color: #6c757d;
+}
+.send-m {
+  width: 20px;
+  filter: invert(100%);
+}
+.plane-send {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+.form-group2 {
+  margin-top: 10px;
+  display: flex;
+}
+.btn {
+  background-color: #3d82e8 !important;
+}
+.btn:hover {
+  background-color: #01388b !important;
+  border-color: #01388b !important;
+}
+.download-link {
+  display: inline-block;
+}
+.download-icon {
+  width: 50px; /* アイコンのサイズを調整 */
+  fill: #ffffff; /* アイコンの色を白に指定 */
+  transition: transform 0.3s ease; /* マウスホバー時のアニメーション */
+}
+.download-icon:hover {
+  transform: scale(1.2); /* マウスオーバー時にアイコンが少し大きくなる */
+}
+.image-container {
+  background-color: #474848;
+  border-radius: 10px;
+  display: inline-grid;
+}
+
+  /* 画面幅が430px以下の場合に適用するスタイル */
+@media (max-width: 430px) {
+  .chat-container {
+    margin: 0;
+  }
+  .chat-messages {
+    height: 80vh;
+  }
+}
+@media (max-width: 375px) {
+  .chat-messages {
+    height: 74vh;
+  }
+}
